@@ -1,50 +1,36 @@
 # Embroidery File Toolkit
 
-A free and open-source toolkit for working with machine embroidery files.
+A free and open-source Python toolkit for inspecting machine embroidery files.
 
-The goal of this project is to provide simple utilities for embroidery designers, digitizers, and developers who work with machine embroidery formats.
+## Current Features
 
-## Features
-
-- Read basic embroidery file information
-- Display design dimensions
-- Display stitch count
-- Detect embroidery file format
-- Simple command-line interface
-- More tools planned
+- Identify common embroidery file extensions
+- Read basic Tajima DST header information
+- Extract design label and header metadata
+- Estimate design width and height from DST header bounds
+- Count basic stitch, jump, and color-change records
+- Detect the DST end marker
 
 ## Supported Formats
 
-The project aims to support common machine embroidery formats including:
+| Format | Current Support |
+|---|---|
+| DST | Basic metadata analysis |
+| PES | Extension identification only |
+| JEF | Extension identification only |
+| PEC | Extension identification only |
+| EXP | Extension identification only |
 
-- DST
-- PES
-- JEF
-- PEC
-- EXP
+Other formats are not fully parsed yet.
 
-## Getting Started
+## Requirements
 
-This project is currently under development.
+- Python 3
+- No additional packages required
 
-More installation instructions and examples will be added as the toolkit develops.
+## Usage
 
-## Roadmap
+Run the tool with a DST embroidery file:
 
-- [ ] DST file information reader
-- [ ] PES file support
-- [ ] JEF file support
-- [ ] Stitch count detection
-- [ ] Design dimension detection
-- [ ] Embroidery file preview
-- [ ] File conversion utilities
-
-## Contributing
-
-Contributions are welcome.
-
-If you have an idea, find a bug, or want to improve the project, feel free to open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
+```bash
+python embroidery_info.py design.dst
